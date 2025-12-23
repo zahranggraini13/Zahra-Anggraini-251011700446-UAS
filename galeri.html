@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Saya</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1 class="fw-bold">Selamat Datang di Website Saya</h1>
+        <p class="mt-3">Website sederhana menggunakan HTML & Bootstrap</p>
+    </section>
+
+    <!-- NAVBAR FULL WIDTH -->
+    <nav class="navbar p-0">
+        <div class="navbar-box w-100">
+            <div class="container d-flex justify-content-center">
+                <ul class="navbar-nav flex-row gap-4">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="karya.html">Karya & Project</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="informasi.html">Informasi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <section class="content">
+    <div class="container">
+        <div class="content-box">
+
+            <h2 class="fw-bold text-center mb-4">Galeri</h2>
+
+            <!-- NAV TAB -->
+            <ul class="nav nav-pills justify-content-center mb-4">
+                <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#foto">Foto</button></li>
+                <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#video">Video</button></li>
+                <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#audio">Audio</button></li>
+                <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#dokumen">Dokumen</button></li>
+            </ul>
+
+            <div class="tab-content">
+
+<!-- ================= FOTO (6) ================= -->
+<div class="tab-pane fade show active" id="foto">
+    <div class="row g-4">
+        <script>
+            for(let i=1;i<=6;i++){
+                document.write(`
+                <div class="col-md-4">
+                    <div class="card hover-card" data-bs-toggle="modal" data-bs-target="#fotoModal${i}">
+                        <img src="foto${i}.jpg" class="card-img-top">
+                        <div class="card-body text-center">Foto ${i}</div>
+                    </div>
+                </div>
+                `)
+            }
+        </script>
+    </div>
+</div>
+
+<!-- ================= VIDEO (3) ================= -->
+<div class="tab-pane fade" id="video">
+    <div class="row g-4">
+        <script>
+            for(let i=1;i<=3;i++){
+                document.write(`
+                <div class="col-md-4">
+                    <div class="card hover-card" data-bs-toggle="modal" data-bs-target="#videoModal${i}">
+                        <div class="ratio ratio-16x9">
+                            <video muted>
+                                <source src="vid${i}.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="card-body text-center">Video ${i}</div>
+                    </div>
+                </div>
+                `)
+            }
+        </script>
+    </div>
+</div>
+
+<!-- ================= AUDIO (3) ================= -->
+<div class="tab-pane fade" id="audio">
+    <div class="row g-4">
+        <script>
+            for(let i=1;i<=3;i++){
+                document.write(`
+                <div class="col-md-4">
+                    <div class="card hover-card text-center" data-bs-toggle="modal" data-bs-target="#audioModal${i}">
+                        <div class="card-body">
+                            <h5>🎵 Audio ${i}</h5>
+                            <p class="text-muted">Klik untuk memutar</p>
+                        </div>
+                    </div>
+                </div>
+                `)
+            }
+        </script>
+    </div>
+</div>
+
+<!-- ================= DOKUMEN (3) ================= -->
+<div class="tab-pane fade" id="dokumen">
+    <div class="row g-4">
+        <script>
+            for(let i=1;i<=3;i++){
+                document.write(`
+                <div class="col-md-4">
+                    <div class="card hover-card text-center" data-bs-toggle="modal" data-bs-target="#docModal${i}">
+                        <div class="card-body">
+                            <h5>📄 Dokumen ${i}</h5>
+                            <p class="text-muted">Klik untuk membuka</p>
+                        </div>
+                    </div>
+                </div>
+                `)
+            }
+        </script>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FOTO MODAL ================= -->
+<script>
+for(let i=1;i<=6;i++){
+document.write(`
+<div class="modal fade" id="fotoModal${i}" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <img src="foto${i}.jpg" class="img-fluid w-100">
+        </div>
+    </div>
+</div>
+`)
+}
+</script>
+
+<!-- ================= VIDEO MODAL ================= -->
+<script>
+for(let i=1;i<=3;i++){
+document.write(`
+<div class="modal fade" id="videoModal${i}" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <video controls class="w-100">
+                <source src="vid${i}.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</div>
+`)
+}
+</script>
+
+<!-- ================= AUDIO MODAL ================= -->
+<script>
+for(let i=1;i<=3;i++){
+document.write(`
+<div class="modal fade" id="audioModal${i}" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center p-4">
+            <h5>Audio ${i}</h5>
+            <audio controls class="w-100 mt-3">
+                <source src="audio${i}.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+</div>
+`)
+}
+</script>
+
+<!-- ================= DOKUMEN MODAL ================= -->
+<script>
+for(let i=1;i<=3;i++){
+document.write(`
+<div class="modal fade" id="docModal${i}" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center p-4">
+            <h5>Dokumen ${i}</h5>
+            <a href="dok${i}.pdf" target="_blank" class="btn btn-primary mt-3">Buka Dokumen</a>
+        </div>
+    </div>
+</div>
+`)
+}
+</script>
+
+
+    <!-- Bootstrap JS -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- FOOTER -->
+<footer class="footer">
+    <div class="container text-center">
+        <p class="mb-1 fw-semibold">© 2025 Zahra Anggraini</p>
+        <p class="mb-0 small">
+            Website dibuat sebagai media pembelajaran Pemrograman Web
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>

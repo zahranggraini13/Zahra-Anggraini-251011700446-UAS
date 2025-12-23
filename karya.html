@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Saya</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1 class="fw-bold">Selamat Datang di Website Saya</h1>
+        <p class="mt-3">Website sederhana menggunakan HTML & Bootstrap</p>
+    </section>
+
+    <!-- NAVBAR FULL WIDTH -->
+    <nav class="navbar p-0">
+        <div class="navbar-box w-100">
+            <div class="container d-flex justify-content-center">
+                <ul class="navbar-nav flex-row gap-4">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="karya.html">Karya & Project</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="informasi.html">Informasi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <section class="content">
+        <div class="container">
+            <div class="content-box">
+               <h2 class="fw-bold text-center mb-4">Karya & Project</h2>
+
+<p class="text-muted text-center mb-5">
+    Beberapa karya yang telah saya buat.
+</p>
+
+<div class="row g-4">
+
+    <!-- KARYA 1 -->
+    <div class="col-md-4">
+        <div class="card h-100 karya-card">
+            <img src="ss1.png"
+                 class="card-img-top"
+                 alt="Karya 1"
+                 data-bs-toggle="modal"
+                 data-bs-target="#imgModal1">
+            <div class="card-body">
+                <h5 class="card-title">Pertemuan 19</h5>
+                <p class="card-text text-muted">
+                    Form input untuk memasukkan nama, NIM, dan tahun lahir guna menampilkan data serta menghitung usia.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- KARYA 2 -->
+    <div class="col-md-4">
+        <div class="card h-100 karya-card">
+            <img src="ss2.png"
+                 class="card-img-top"
+                 alt="Karya 2"
+                 data-bs-toggle="modal"
+                 data-bs-target="#imgModal2">
+            <div class="card-body">
+                <h5 class="card-title">Pertemuan 9</h5>
+                <p class="card-text text-muted">
+                    Website sederhana untuk memperkenalkan diri, berisi menu navigasi dan informasi singkat pemilik website.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- KARYA 3 -->
+    <div class="col-md-4">
+        <div class="card h-100 karya-card">
+            <img src="ss3.png"
+                 class="card-img-top"
+                 alt="Karya 3"
+                 data-bs-toggle="modal"
+                 data-bs-target="#imgModal3">
+            <div class="card-body">
+                <h5 class="card-title">Pertemuan 14</h5>
+                <p class="card-text text-muted">
+                    Tampilan Landing Page dengan desain modern dan responsif, dilengkapi menu navigasi dan tombol call-to-action.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- MODAL GAMBAR 1 -->
+<div class="modal fade" id="imgModal1" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+            <div class="modal-body p-0 text-center">
+                <img src="ss1.png"
+                     class="img-fluid"
+                     data-bs-dismiss="modal">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL GAMBAR 2 -->
+<div class="modal fade" id="imgModal2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+            <div class="modal-body p-0 text-center">
+                <img src="ss2.png"
+                     class="img-fluid"
+                     data-bs-dismiss="modal">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL GAMBAR 3 -->
+<div class="modal fade" id="imgModal3" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+            <div class="modal-body p-0 text-center">
+                <img src="ss3.png"
+                     class="img-fluid"
+                     data-bs-dismiss="modal">
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- FOOTER -->
+<footer class="footer">
+    <div class="container text-center">
+        <p class="mb-1 fw-semibold">© 2025 Zahra Anggraini</p>
+        <p class="mb-0 small">
+            Website dibuat sebagai media pembelajaran Pemrograman Web
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
